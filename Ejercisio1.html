@@ -1,52 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="es"> <!--Lo primero fue cambiar la estructura del html , para agregarle el lang con español , utilice html 5 -->
 <head>
-    <title>Blog - Consejos de Diseño UX</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Consejos de Diseño UX</title>
 </head>
+<!--Luego separar la estructura del documento por nav , main y footer-->
 <body>
-    <div style="background-color: #f0f0f0; padding: 15px;">
+  <!--El primer cambio deberia de ser el nav que debe estar propiamente etiquetado-->
+   <nav>
+    <h1 style="background-color: #f0f0f0; padding: 15px;">
         <div style="font-size: 28px; color: #333;">Consejos Rápidos para un Mejor Diseño UX</div>
+    </h1>
+   </nav> 
+
+   <main id="Contenido">
+    <div>
+        <h2 style="font-size: 20px; margin-top: 20px;">Cómo Mejorar la Usabilidad</h2>
+        <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Publicado el 15 de Octubre, 2024</p>
     </div>
     
-    <div>
-        <div style="font-size: 20px; margin-top: 20px;">Cómo Mejorar la Usabilidad</div>
-        <div style="font-size: 14px; color: #666; margin-bottom: 10px;">Publicado el 15 de Octubre, 2024</div>
-    </div>
+    <!--Uso de imagenes debe de llevar la etiqueta figure-->
     
-    <div>
-        <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" width="600" height="300">
+    <figure>
+      <div>
+        <img src="https://addaw.org//cdn/admin/assets/images/galeria/SRypBs4xEP7LUMVzbO1o.jpg" 
+        width="600" height="300"
+        alt="Grafico mostrando el uso de las imagenes"> <!--Se debe de colocar la descripcion de la imagen con alt-->
+        <figcaption>Grafico que muestra el uso de las imagenes en el diseño</figcaption>
         <div>El uso de imágenes en el diseño.</div>
     </div>
+    </figure>
     
+    <!--Cambie las etiquetas de las palabras para generar una jerarquia y agregue columnas con ul-->
     <div>
-        <div style="font-size: 16px; margin-top: 15px; line-height: 1.5;">
+        <p style="font-size: 16px; margin-top: 15px; line-height: 1.5;">
             El diseño de experiencia de usuario (UX) es crucial. Aquí compartimos algunos *tips* esenciales:
-        </div>
-        <div style="margin-top: 10px;">
-            <div style="color: green;">✔ **Contraste de Color**</div>
-            <div style="color: red;">✘ **Navegación Intuitiva**</div>
-            <div style="color: blue;">▶ **Tamaños de Fuente Legibles**</div>
-        </div>
+        </p>
+        <ul style="margin-top: 10px;">
+            <li style="color: green;">✔ **Contraste de Color**</li>
+            <li style="color: red;">✘ **Navegación Intuitiva**</li>
+            <li style="color: blue;">▶ **Tamaños de Fuente Legibles**</li>
+        </ul>
     </div>
     
     <div style="margin-top: 30px; background-color: #eee; padding: 15px;">
         <div style="font-size: 18px;">Deje su Comentario</div>
-        <div>
-            <div style="margin: 10px 0;">
-                <input type="text" placeholder="Su Nombre">
-            </div>
-            <div style="margin: 10px 0;">
-                <input type="text" placeholder="Escriba su comentario aquí">
-            </div>
-            <div style="background-color: #007bff; color: white; padding: 10px; text-align: center;">
-                Publicar
-            </div>
+        <form>
+            <label for="Nombre">Entra tu nombre:</label>
+            <input type="text"  id="nombre"  name="Nombre">
+            <label for="Comentario">Escribe tu comentario aqui:</label>
+            <input type="text" placeholder="Escriba su comentario aquí">
+        </form>
+            <!--Botones con mas que solo el verbo , si no agregar un sustantivo(publicar comentario)-->
+            <button style="background-color: #007bff; color: white; padding: 10px; text-align: center;">
+                Publicar Comentario
+            </button>
         </div>
     </div>
+
+   </main>
+
     
-    <div style="background-color: #333; color: white; padding: 15px; margin-top: 40px;">
+
+    <footer>
+        <div style="background-color: #333; color: white; padding: 15px; margin-top: 40px;">
         <div style="font-size: 12px;">© 2024 Blog de Diseño UX</div>
         <div><a href="/contacto" style="color: #ffcc00; text-decoration: none;">Contáctanos</a></div>
     </div>
+
+    </footer>
+
 </body>
 </html>
